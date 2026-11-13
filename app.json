@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "DreamWare Cleaner",
+    "slug": "dreamware-cleaner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "DreamWare adds your assigned cleaning visits to your calendar.",
+        "NSCalendarsFullAccessUsageDescription": "DreamWare adds your assigned cleaning visits to your calendar.",
+        "NSRemindersUsageDescription": "DreamWare may need reminders access when writing calendar events."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["READ_CALENDAR", "WRITE_CALENDAR"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "DreamWare adds your assigned cleaning visits to your calendar."
+        }
+      ]
+    ]
+  }
+}
